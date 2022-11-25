@@ -1,16 +1,10 @@
 import 'leaflet/dist/leaflet.css'
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  useMap,
-} from 'react-leaflet'
+import { MapContainer, TileLayer, useMap } from 'react-leaflet'
 
-import icon from './icon'
+import MarkerPosition from './MarkerPosition'
 
 type mapProps = {
-  address: string
+  address: any
 }
 
 function Map({ address }: mapProps) {
@@ -23,7 +17,7 @@ function Map({ address }: mapProps) {
         >
           Map
           <MapContainer
-            center={[51.505, -0.09]}
+            center={[address.location.lat, address.location.lng]}
             zoom={13}
             scrollWheelZoom={true}
             style={{ height: '100%', width: '100%' }}
@@ -32,11 +26,7 @@ function Map({ address }: mapProps) {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker icon={icon} position={[51.505, -0.09]}>
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
-            </Marker>
+            <MarkerPosition address={address} />
           </MapContainer>
         </div>
       )}

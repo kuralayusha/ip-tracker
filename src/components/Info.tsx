@@ -1,23 +1,8 @@
 type infoProps = {
   address: any
-  place: any
-  a: any
 }
 
-function Info({ address, place, a }: infoProps) {
-  console.log(address.ip)
-  console.log(address.isp)
-  console.log(address.location)
-
-  // console.log(place.lat)
-  console.log(address.location.city)
-  console.log(address.location.country)
-  console.log(address.location.lat)
-  console.log(address.location.lng)
-  console.log(address.location.postalCode)
-  console.log(address.location.region)
-  console.log(address.location.timezone)
-
+function Info({ address }: infoProps) {
   return (
     <>
       {address && (
