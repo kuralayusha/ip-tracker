@@ -41,7 +41,7 @@ function Header({
 
   return (
     <div className="header">
-      <div>
+      <div className="backGround">
         <img src={backGround} alt="" />
       </div>
       <article>
