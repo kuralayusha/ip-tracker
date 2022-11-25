@@ -6,9 +6,4 @@ export default L.icon({
   iconAnchor: [10, 41],
   popupAnchor: [2, -40],
   iconUrl: icon,
-  // iconRetinaUrl: icon,
-  // shadowUrl: null,
-  // shadowSize: null,
-  // shadowAnchor: null,
-  // className: 'leaflet-div-icon',
 })
