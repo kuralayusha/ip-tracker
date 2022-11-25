@@ -41,28 +41,26 @@ function Header({
 
   return (
     <div className="header">
-      <section>
-        <div>
-          <img src={backGround} alt="" />
-        </div>
-        <article>
-          <h2>IP Address Tracker</h2>
+      <div>
+        <img src={backGround} alt="" />
+      </div>
+      <article>
+        <h2>IP Address Tracker</h2>
 
-          <form onSubmit={handleSubmit} autoComplete="off">
-            <input
-              type="text"
-              name="ipaddress"
-              id="ipadress"
-              placeholder="Search for any IP address or domain"
-              value={ipAddress}
-              onChange={(e) => setIpAddress(e.target.value)}
-            />
-            <button type="submit">
-              <img src={arrow} alt="" />
-            </button>
-          </form>
-        </article>
-      </section>
+        <form onSubmit={handleSubmit} autoComplete="off">
+          <input
+            type="text"
+            name="ipaddress"
+            id="ipadress"
+            placeholder="Search for any IP address or domain"
+            value={ipAddress}
+            onChange={(e) => setIpAddress(e.target.value)}
+          />
+          <button type="submit">
+            <img src={arrow} alt="" />
+          </button>
+        </form>
+      </article>
     </div>
   )
 }
