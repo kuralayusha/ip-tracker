@@ -9,17 +9,17 @@ type mapProps = {
 
 function Map({ address }: mapProps) {
   return (
-    <>
+    <div className="map--container">
       {address && (
         <div
           className="map"
-          style={{ height: '500px', width: '900px' }}
+          // style={{ height: '500px', width: '900px' }}
         >
-          Map
           <MapContainer
             center={[address.location.lat, address.location.lng]}
             zoom={13}
             scrollWheelZoom={true}
+            zoomControl={false}
             style={{ height: '100%', width: '100%' }}
           >
             <TileLayer
@@ -30,7 +30,7 @@ function Map({ address }: mapProps) {
           </MapContainer>
         </div>
       )}
-    </>
+    </div>
   )
 }
 

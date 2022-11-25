@@ -19,7 +19,7 @@ function MarkerPosition({ address }: markerProps) {
   return (
     <Marker icon={icon} position={position}>
       <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
+        IP Address/ Domain <br /> Shows Here.
       </Popup>
     </Marker>
   )

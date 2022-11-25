@@ -4,12 +4,10 @@
     background-color: #fff;
     border-radius: 15px;
     width: 327px;
-    /* height: 294px; */
-    margin: 0;
+    margin: 0 6vw 0 6vw;
     padding: 25px 24px;
     position: absolute;
     top: 170px;
-    right: 23px;
     z-index: 3000;
 }
 
