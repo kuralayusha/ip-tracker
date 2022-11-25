@@ -1,6 +1,7 @@
 import { MapContainer, TileLayer } from 'react-leaflet'
 import MarkerPosition from './MarkerPosition'
 import 'leaflet/dist/leaflet.css'
+import './Map.css'
 
 type mapProps = {
   address: any

@@ -1,5 +1,6 @@
-import arrow from '../images/icon-arrow.svg'
-import backGround from '../images/pattern-bg.png'
+import arrow from '../../images/icon-arrow.svg'
+import backGround from '../../images/pattern-bg.png'
+import './Header.css'
 
 type headerProps = {
   setIpAddress: any
@@ -37,14 +38,15 @@ function Header({
     const data = await res.json()
     setAddress(data)
   }
+
   return (
-    <div className="App">
+    <div className="header">
       <section>
         <div>
           <img src={backGround} alt="" />
         </div>
         <article>
-          <h2>IP Address</h2>
+          <h2>IP Address Tracker</h2>
 
           <form onSubmit={handleSubmit} autoComplete="off">
             <input

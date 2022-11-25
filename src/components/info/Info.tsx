@@ -1,3 +1,5 @@
+import './Info.css'
+
 type infoProps = {
   address: any
 }

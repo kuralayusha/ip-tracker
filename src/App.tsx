@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import Header from './components/Header'
-import Info from './components/Info'
-import Map from './components/Map'
+import Header from './components/header/Header'
+import Info from './components/info/Info'
+import Map from './components/map/Map'
+import './App.css'
 
 function App() {
   const [address, setAddress] = useState<any>(null)
