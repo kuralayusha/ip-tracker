@@ -85,7 +85,7 @@ form button:hover {
     background-color: #3F3F3F;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 850px) {
     .backGround {
         height: 280px;
     }
