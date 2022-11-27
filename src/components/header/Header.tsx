@@ -13,16 +13,20 @@ function Header({
   ipAddress,
   setAddress,
 }: headerProps) {
+  // checkIpAddress function checks if the input is a valid IP address
   const checkIpAddress =
     /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi
+  //  or domain name
   const checkDomain =
     /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+/
 
+  // handleSubmit function handles the submit event
   function handleSubmit(e: any) {
     e.preventDefault()
     getEnteredAddress()
   }
 
+  // gets the IP address or domain name from the input and checks if it is valid or not and then sets the address
   async function getEnteredAddress() {
     const res = await fetch(
       `https://geo.ipify.org/api/v2/country,city?apiKey=${

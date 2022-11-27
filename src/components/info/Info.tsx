@@ -5,6 +5,7 @@ type infoProps = {
 }
 
 function Info({ address }: infoProps) {
+  // info page is rendered only when the address state is not null
   return (
     <>
       {address && (

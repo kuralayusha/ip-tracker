@@ -8,23 +8,11 @@ type mapProps = {
 }
 
 function Map({ address }: mapProps) {
-  // const ComponentResize = () => {
-  //   const map = useMap()
-
-  //   setTimeout(() => {
-  //     map.invalidateSize()
-  //   }, 0)
-
-  //   return null
-  // }
-
+  // map is rendered only when the address state is not null
   return (
     <div className="map--container">
       {address && (
-        <div
-          className="map"
-          // style={{ height: '500px', width: '900px' }}
-        >
+        <div className="map">
           <MapContainer
             center={[address.location.lat, address.location.lng]}
             zoom={13}
@@ -32,7 +20,6 @@ function Map({ address }: mapProps) {
             zoomControl={false}
             style={{ height: '100%', width: '100%' }}
           >
-            {/* <ComponentResize /> */}
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

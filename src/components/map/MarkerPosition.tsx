@@ -7,6 +7,8 @@ type markerProps = {
 }
 
 function MarkerPosition({ address }: markerProps) {
+  // marker is rendered only when the address state is not null
+
   const position: any = [address.location.lat, address.location.lng]
   const map = useMap()
 

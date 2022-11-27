@@ -5,9 +5,12 @@ import Map from './components/map/Map'
 import './App.css'
 
 function App() {
+  // address state is used to store the data from the API
   const [address, setAddress] = useState<any>(null)
+  // ip state is used to store the ip address from the input
   const [ipAddress, setIpAddress] = useState('')
 
+  // useEffect is used to get the user's IP address and location when the app loads
   useEffect(() => {
     try {
       const getInitialData = async () => {
