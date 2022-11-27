@@ -37,3 +37,32 @@
 .info.four p {
     margin: 0;
 }
+
+
+@media (min-width: 850px) {
+    .info--container {
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+        height: 150px;
+        padding: 37px 0;
+        top: 205px;
+    }
+
+    .info.one,
+    .info.two,
+    .info.three {
+        border-right: solid 1px #0000002d;
+        mix-blend-mode: normal;
+
+        padding: 0 32px;
+    }
+
+    .info.four {
+        padding: 0 32px;
+    }
+
+    .info h2{
+        text-align: start;
+    }
+}
