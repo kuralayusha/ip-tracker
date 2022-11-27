@@ -54,7 +54,6 @@
     .info.three {
         border-right: solid 1px #0000002d;
         mix-blend-mode: normal;
-
         padding: 0 32px;
     }
 
@@ -64,5 +63,15 @@
 
     .info h2{
         text-align: start;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 1.75px;
+        margin: 0 0 13px 0;
+    }
+
+    .info p {
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: -0.23px;
     }
 }
