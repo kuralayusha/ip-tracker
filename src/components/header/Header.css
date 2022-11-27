@@ -96,6 +96,9 @@ form button:hover {
 
     article h2 {
         margin-bottom: 31px;
+        font-size: 32px;
+        line-height: 30px;
+        letter-spacing: -0.28;
     }
 
     form input {
