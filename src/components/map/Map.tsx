@@ -1,6 +1,6 @@
-import { MapContainer, TileLayer } from 'react-leaflet'
-import MarkerPosition from './MarkerPosition'
 import 'leaflet/dist/leaflet.css'
+import { MapContainer, TileLayer, useMap } from 'react-leaflet'
+import MarkerPosition from './MarkerPosition'
 import './Map.css'
 
 type mapProps = {
@@ -8,6 +8,16 @@ type mapProps = {
 }
 
 function Map({ address }: mapProps) {
+  // const ComponentResize = () => {
+  //   const map = useMap()
+
+  //   setTimeout(() => {
+  //     map.invalidateSize()
+  //   }, 0)
+
+  //   return null
+  // }
+
   return (
     <div className="map--container">
       {address && (
@@ -22,6 +32,7 @@ function Map({ address }: mapProps) {
             zoomControl={false}
             style={{ height: '100%', width: '100%' }}
           >
+            {/* <ComponentResize /> */}
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
