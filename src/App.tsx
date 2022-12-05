@@ -23,6 +23,7 @@ function App() {
       getInitialData()
     } catch (error) {
       console.log(error)
+      // if there is an error, the user will be notified
     }
   }, [])
 
